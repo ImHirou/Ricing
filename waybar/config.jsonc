@@ -13,9 +13,8 @@
 		"hyprland/workspaces",
 		"custom/right-arrow",
 		"custom/left-arrow",
-		"tray",
-		"custom/right-arrow",
-		"cava"
+		"temperature",
+		"custom/right-arrow"
 	],
 	"modules-center": [
 		"custom/left-arrow",
@@ -43,7 +42,7 @@
 		"custom/right-arrow",
 		"custom/left-arrow",
 		"hyprland/language",
-		"custom/right-arrow",
+		"custom/right-arrow"
 	],
 
 	"custom/left-arrow": {
@@ -68,7 +67,7 @@
     		"persistent-workspaces": {
       			"1": [],
       			"2": [],
-      			"3": [],
+      			"3": []
     		}
   	},
   	"hyprland/language": {

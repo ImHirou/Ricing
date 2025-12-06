@@ -9,7 +9,7 @@ PanelWindow {
     property string bgSource
     property var pSources
 
-    property int bgMaring: 32
+    property int bgMargin: 32
 
 
     exclusionMode: ExclusionMode.Ignore
@@ -26,7 +26,7 @@ PanelWindow {
     Image {
         id: background
         anchors.fill: parent
-        anchors.margins: -bgMaring
+        anchors.margins: -bgMargin
         fillMode: Image.PreserveAspectCrop
         source: bgSource
         smooth: false
@@ -71,25 +71,25 @@ PanelWindow {
         anchors.fill: parent
         hoverEnabled: true
         onPositionChanged: (mouse) => {
-            let centerX = root.screen.width/2;
-            let centerY = root.screen.height/2;
+            var centerX = root.screen.width/2;
+            var centerY = root.screen.height/2;
 
-            for (let i = 0; i < pSources.length; i++) {
+            for (var i = 0; i < pSources.length; i++) {
                 var img = panorama.itemAt(i); 
                 if (!img) continue;
 
-                let distX = mouse.x - img.centerX;
-                let distY = mouse.y - img.centerY;
+                var distX = mouse.x - img.centerX;
+                var distY = mouse.y - img.centerY;
 
-                img.tX = clamp(distX / 10, -bgMaring, bgMaring);
-                img.tY = clamp(distY / 10, -bgMaring, bgMaring);
+                img.tX = clamp(distX / 10, -bgMargin, bgMargin);
+                img.tY = clamp(distY / 10, -bgMargin, bgMargin);
             }
             
-            let dx = mouse.x - centerX;
-            let dy = mouse.y - centerY;
+            var dx = mouse.x - centerX;
+            var dy = mouse.y - centerY;
 
-            let bX = map(dx, -centerX, centerX, -bgMaring, bgMaring);
-            let bY = map(dy, -centerY, centerY, -bgMaring, bgMaring);
+            var bX = map(dx, -centerX, centerX, -bgMargin, bgMargin);
+            var bY = map(dy, -centerY, centerY, -bgMargin, bgMargin);
 
             background.tX = bX;
             background.tY = bY;

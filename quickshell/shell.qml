@@ -1,6 +1,7 @@
 import Quickshell
 
 ShellRoot {
+    Bar {}
     Background {
         bgSource: "/home/rick/ricing/assets/backgrounds/background.png"
         pSources: [
